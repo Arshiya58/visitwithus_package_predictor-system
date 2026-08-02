@@ -10,7 +10,6 @@ permissions:
   contents: write
 
 jobs:
-
   register-dataset:
     runs-on: ubuntu-latest
     steps:
