@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r visitwithus_package_predictor-system/requirements.txt
       - name: Register dataset
-        run: pythonvisitwithus_package_predictor-system/model_building/data_register.py
+        run: visitwithus_package_predictor-system/model_building/data_register.py
       - name: Upload registered dataset
         uses: actions/upload-artifact@v4
         with:
