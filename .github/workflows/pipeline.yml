@@ -11,21 +11,23 @@ permissions:
 
 jobs:
   register-dataset:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-python@v5
-      with:
-        python-version: "3.11"
-    - name: Install Dependencies
-      run: pip install -r visitwithus_package_predictor-system/requirements.txt
-    - name: Register Dataset
-      run: visitwithus_package_predictor-system/model_building/data_register.py
-    - name: Upload Registered Dataset
-      uses: actions/upload-artifact@v4
-      with:
-        name: registered-data
-        path: visitwithus_package_predictor-system/data/tourism.csv
+    name: Register Dataset
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r visitwithus_package_predictor-system/requirements.txt
+      - name: Register dataset
+        run: pythonvisitwithus_package_predictor-system/model_building/data_register.py
+      - name: Upload registered dataset
+        uses: actions/upload-artifact@v4
+        with:
+          name: registered-data
+          path: visitwithus_package_predictor-system/data/machine-failure-prediction.csv
+
 
   data-prep:
     needs: register-dataset
