@@ -26,7 +26,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: registered-data
-          path: visitwithus_package_predictor-system/data/machine-failure-prediction.csv
+          path: visitwithus_package_predictor-system/data/tourism.csv
 
 
   data-prep:
