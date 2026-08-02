@@ -6,7 +6,7 @@ import os
 # for data preprocessing and pipeline creation
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
-df = pd.read_csv(RAW_PATH)
+df = pd.read_csv('visitwithus_package_predictor-system/data/tourism.csv')
 
 # Drop unique identifier column (not useful for modeling)
 df.drop(columns=['customerID'], inplace=True)
