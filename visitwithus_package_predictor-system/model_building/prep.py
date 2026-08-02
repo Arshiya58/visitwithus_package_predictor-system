@@ -9,7 +9,7 @@ from sklearn.preprocessing import LabelEncoder
 df = pd.read_csv('visitwithus_package_predictor-system/data/tourism.csv')
 
 # Drop unique identifier column (not useful for modeling)
-df.drop(columns=['customerID'], inplace=True)
+df.drop(columns=['CustomerID'], inplace=True)
 
 
 # Split Features and Target
