@@ -20,17 +20,17 @@ y = df["ProdTaken"]
 
 # Train-Test Split
 
-X_train, X_test, y_train, y_test = train_test_split(
+Xtrain, Xtest, ytrain, ytest = train_test_split(
     X,
     y,
     test_size=0.20,
     random_state=42,
     stratify=y
 )
-X_train.to_csv("Xtrain.csv", index=False)
-X_test.to_csv("Xtest.csv", index=False)
-y_train.to_csv("ytrain.csv", index=False)
-y_test.to_csv("ytest.csv", index=False)
+Xtrain.to_csv("Xtrain.csv", index=False)
+Xtest.to_csv("Xtest.csv", index=False)
+ytrain.to_csv("ytrain.csv", index=False)
+ytest.to_csv("ytest.csv", index=False)
 
 print("Data prepared: train/test splits written.")
 print("Type values kept as:", sorted(X["Type"].unique()))
